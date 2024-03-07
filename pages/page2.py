@@ -266,12 +266,12 @@ def topics():
         
         
         
-        st.subheader("ORDER BY")
-        st.subheader("ORDER BY")
-        st.subheader("ORDER BY")
-        st.subheader("ORDER BY")
-        st.subheader("ORDER BY")
-        st.subheader("ORDER BY")
+        st.subheader("Aggregation Functions")
+        st.subheader("SUM(column_name)")
+        st.subheader("COUNT()")
+        st.subheader("COUNT(DISTINCT column_name)")
+        st.subheader("MIN(column_name)")
+        st.subheader("MAX(column_name)")
         st.subheader("ORDER BY")
         st.subheader("ORDER BY")
         st.subheader("ORDER BY")
