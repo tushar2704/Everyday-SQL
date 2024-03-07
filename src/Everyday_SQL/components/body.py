@@ -209,100 +209,257 @@ def topics():
     
     
     st.subheader("SQL - Beginner SQL Syntax")
-    st.subheader("SELECT")
+    st.divider()
     
-    st.markdown(
-        """
+    col3, col4 = st.columns([0.5, 0.5], gap="small")
+    
+    with col3:
+        st.subheader("SELECT")
+        st.text("""The SELECT statement is used to select columns in a database. 
+                It defines the data you want to retrieve from one or more tables""")
         
-        """
-    )
-    st.code(
-        """
-        
-        
-        """
-    )
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                column_name1,
+                column_name2,
+                column_name3
+            FROM
+                table_name;
+            """, language="sql"
+        )
+                
             
         
-    
-    st.subheader("FROM")
-    
-    st.markdown(
-        """
+        st.subheader("FROM")
         
-        """
-    )
-    st.code(
-        """
-       
-        """
-    )
-    
-    
-    
-    
-    st.subheader("WHERE")
-    
-    st.markdown(
-        """
+        st.text("""The FROM clause specifies the table from which to pull the data.  
+                It's used in conjunction with SELECT to define the source of the data.""")
         
-        """
-    )
-    st.code(
-        """
-                 
-        """
-    )
-    
-    
-    
-    
-    st.subheader("GROUP BY")
-    
-    st.markdown(
-        """
-        
-        """
-    )
-    st.code(
-        """
-        
-        """
-    )
-    
-    
-    st.subheader("HAVING")
-    
-    st.markdown(
-        """
-        
-        """
-    )
-    st.code(
-        """
-        
-        """
-    )
-    
-    
-    
-    st.subheader("ORDER BY")
-    
-    st.markdown(
-        """
-       
-        """
-    )
-    st.code(
-        """
-        
-        """
-    )
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                column_name1,
+                column_name2,
+                column_name3
+            FROM 
+                table_name;
+            """, language="sql"
+        )
         
         
         
         
-    # st.subheader("Aggregation Functions")
+        st.subheader("WHERE")
+        
+        st.text("""Use the WHERE clause to filter the data based on specific conditions. 
+                It helps in narrowing down the data to only those rows that meet the criteria.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT column_name
+            FROM table_name
+            WHERE date >= ‘2023-01-01’
+            """, language="sql"
+        )
+        
+    
+    
+    with col4:
+        st.subheader("GROUP BY")
+        
+        st.text("""The GROUP BY statement groups rows that have the same values in specified columns. 
+                It's often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) 
+                to group the resultset by one or more columns""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                column_name, 
+                COUNT(*) 
+            FROM table_name 
+            GROUP BY column_name;
+            """, language="sql"
+        )
+        
+        
+        st.subheader("HAVING")
+        
+        st.text("""The HAVING clause is used to filter groups created by the GROUP BY clause. 
+                It's like a WHERE clause, but for groups.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                column_name, 
+                COUNT(*)
+            FROM table_name
+            GROUP BY column_name
+            HAVING COUNT(*) > 1;
+            """, language="sql"
+        )
+        
+        
+        st.subheader("ORDER BY")
+        
+        st.text("""Use ORDER BY to sort the result set in either ascending or descending order.
+                It specifies the order in which the rows appear in the resultset.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                column_name1,
+                column_name2,
+                column_name3,
+            FROM table_name
+            ORDER BY column_name3 DESC;
+            """, language="sql"
+        )
+        
+        
+    ##########
+    #Aggregation Functions
+    #########
+    st.divider() 
+    
+    st.subheader("Aggregation Functions")
+    
+    st.divider()
+    
+    
+    
+    col5, col6 = st.columns([0.5, 0.5], gap="small")
+    
+    with col5:
+        st.subheader("SELECT")
+        st.text("""The SELECT statement is used to select columns in a database. 
+                It defines the data you want to retrieve from one or more tables""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                column_name1,
+                column_name2,
+                column_name3
+            FROM
+                table_name;
+            """, language="sql"
+        )
+                
+            
+        
+        st.subheader("FROM")
+        
+        st.text("""The FROM clause specifies the table from which to pull the data.  
+                It's used in conjunction with SELECT to define the source of the data.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                column_name1,
+                column_name2,
+                column_name3
+            FROM 
+                table_name;
+            """, language="sql"
+        )
+        
+        
+        
+        
+        st.subheader("WHERE")
+        
+        st.text("""Use the WHERE clause to filter the data based on specific conditions. 
+                It helps in narrowing down the data to only those rows that meet the criteria.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT column_name
+            FROM table_name
+            WHERE date >= ‘2023-01-01’
+            """, language="sql"
+        )
+        
+    
+    
+    with col6:
+        st.subheader("GROUP BY")
+        
+        st.text("""The GROUP BY statement groups rows that have the same values in specified columns. 
+                It's often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) 
+                to group the resultset by one or more columns""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                column_name, 
+                COUNT(*) 
+            FROM table_name 
+            GROUP BY column_name;
+            """, language="sql"
+        )
+        
+        
+        st.subheader("HAVING")
+        
+        st.text("""The HAVING clause is used to filter groups created by the GROUP BY clause. 
+                It's like a WHERE clause, but for groups.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                column_name, 
+                COUNT(*)
+            FROM table_name
+            GROUP BY column_name
+            HAVING COUNT(*) > 1;
+            """, language="sql"
+        )
+        
+        
+        st.subheader("ORDER BY")
+        
+        st.text("""Use ORDER BY to sort the result set in either ascending or descending order.
+                It specifies the order in which the rows appear in the resultset.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                column_name1,
+                column_name2,
+                column_name3,
+            FROM table_name
+            ORDER BY column_name3 DESC;
+            """, language="sql"
+        )
+    
+    
+    
+    
+    
+    
+    
+    ##########
+    #Aggregation Functions
+    #########
+    st.divider() 
+    
+    
+    
+    
+    
     # st.subheader("SUM(column_name)")
     # st.subheader("COUNT()")
     # st.subheader("COUNT(DISTINCT column_name)")
