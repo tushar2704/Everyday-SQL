@@ -327,7 +327,7 @@ def topics():
     #Aggregation Functions
     #########
     st.divider() 
-    
+     
     st.subheader("Aggregation Functions")
     
     st.divider()
