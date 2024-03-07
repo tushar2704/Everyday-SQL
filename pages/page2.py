@@ -149,7 +149,7 @@ def topics():
         
         
         
-        st.subheader("Iterating Over Each Line in a File")
+        st.subheader("SELECT")
         
         st.markdown(
             """
@@ -167,7 +167,7 @@ def topics():
             
         
     with col2:
-        st.subheader("Checking If a File Exists")
+        st.subheader("FROM")
         
         st.markdown(
             """
@@ -188,7 +188,7 @@ def topics():
         #     st.write("Did you know I have more then 101 Supreme apps like this?")
         
         
-        st.subheader("Writing Lists to a File")
+        st.subheader("WHERE")
         
         st.markdown(
             """
