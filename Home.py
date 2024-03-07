@@ -26,6 +26,7 @@ from src.Everyday_SQL.components.navigation import *
 from src.Everyday_SQL.components.siderbar import *
 from src.Everyday_SQL.components.metrics import *
 from src.Everyday_SQL.components.charts import *
+from src.Everyday_SQL.components.elements import *
 from src.Everyday_SQL.components.test import *
 
 
@@ -65,10 +66,9 @@ with st.sidebar:
 #End of Everyday_SQL by github.com/tushar2704
 #######################################################################################################
 
-
-
-
-
+with st.sidebar:
+    st.divider()
+    terms()
 
 
 

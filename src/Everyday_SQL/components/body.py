@@ -32,6 +32,11 @@ from src.Everyday_SQL.components.test import *
 #Body of Everyday_SQL by github.com/tushar2704
 #######################################################################################################
 
+def sql():
+    # D:\QueryMaster-priv\src\QueryMaster\SQL.mp4
+    st.markdown('''#### SQL Overview''')
+    path=os.path.join('src', 'Everyday_SQL', 'style','SQL.gif')
+    st.image(path)
 
 def topics():
     st.header("Structured Query Language")
