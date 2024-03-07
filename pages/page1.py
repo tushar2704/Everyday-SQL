@@ -27,8 +27,107 @@ from src.Everyday_SQL.components.siderbar import *
 from src.Everyday_SQL.components.metrics import *
 from src.Everyday_SQL.components.charts import *
 from src.Everyday_SQL.components.test import *
-
 #######################################################################################################
 #Header of Everyday_SQL by github.com/tushar2704
 #######################################################################################################
+
+# main_title()
+
+#######################################################################################################
+#Page Config of Everyday_SQL by github.com/tushar2704
+#######################################################################################################
+custom_style()
+#######################################################################################################
+#Body of Everyday_SQL by github.com/tushar2704
+#######################################################################################################
+page_header('''
+            ''')
+
+#######################################################################################################
+#Pages(1) of Everyday_SQL by github.com/tushar2704
+#######################################################################################################
+
+
+
+
+#Sidebar Pages
+with st.sidebar:
+    logo()
+    st.page_link("Home.py", label="Back to Home", icon="🏠")
+    
+    
+    
+
+
+def page1():
+    st.header("Top 20 SQL queries that addresses 80% of the programming needs")
+
+
+page1()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

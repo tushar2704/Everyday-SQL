@@ -1,5 +1,5 @@
 ##© 2024 Tushar Aggarwal. All rights reserved.(https://tushar-aggarwal.com)
-##Everyday_Python
+##Everyday_SQL
 #######################################################################################################
 #Importing dependecies
 #######################################################################################################
@@ -20,16 +20,16 @@ import os
 #######################################################################################################
 #Importing from SRC
 #######################################################################################################
-from src.Everyday_Python.components.header import *
-from src.Everyday_Python.components.body import *
-from src.Everyday_Python.components.navigation import *
-from src.Everyday_Python.components.siderbar import *
-from src.Everyday_Python.components.metrics import *
-from src.Everyday_Python.components.charts import *
-from src.Everyday_Python.components.test import *
+from src.Everyday_SQL.components.header import *
+from src.Everyday_SQL.components.body import *
+from src.Everyday_SQL.components.navigation import *
+from src.Everyday_SQL.components.siderbar import *
+from src.Everyday_SQL.components.metrics import *
+from src.Everyday_SQL.components.charts import *
+from src.Everyday_SQL.components.test import *
 
 #######################################################################################################
-#Header of Everyday_Python by github.com/tushar2704
+#Header of Everyday_SQL by github.com/tushar2704
 #######################################################################################################
 
 
