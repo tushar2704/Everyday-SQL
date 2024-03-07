@@ -125,16 +125,24 @@ def topics():
         
     st.subheader("DML- Data Manipulation Language")
     
-    st.markdown(
+    st.text(
         """
-        ##### 
-        """
-    )
-    st.code(
-        """
-        
+        The SQL commands that deal with the manipulation of data present in the database 
+        belong to DML or Data Manipulation Language and this includes most of the SQL statements. 
+        It is the component of the SQL statement that controls access to data and to the database. 
+        Basically, DCL statements are grouped with DML statements.
         """
     )
+    if st.toggle("Show DML Commands"):
+        st.code( 
+                """
+                INSERT: It is used to insert data into a table.
+                UPDATE: It is used to update existing data within a table.
+                DELETE: It is used to delete records from a database table.
+                LOCK: Table control concurrency.
+                CALL: Call a PL/SQL or JAVA subprogram.
+                EXPLAIN PLAN: It describes the access path to data.
+                """, language="markdown")
     
     
     
@@ -399,6 +407,8 @@ def topics():
 
 
 topics()
+
+footer()
 #######################################################################################################
 #Pages(2) of Everyday_SQL by github.com/tushar2704
 #######################################################################################################

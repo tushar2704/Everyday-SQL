@@ -49,10 +49,11 @@ page_header('''
 #Sidebar Pages
 with st.sidebar:
     logo()
+    st.page_link("pages/page2.py", label="SQL Concepts", icon="🐍")
     st.page_link("Home.py", label="Everyday Cheat Sheets", icon="🐍")
     
     st.page_link("pages/page1.py", label="Top SQL Queries", icon="🐍")
-   
+    
     
 
  
