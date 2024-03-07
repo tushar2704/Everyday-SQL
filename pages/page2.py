@@ -75,12 +75,16 @@ def topics():
     
     st.subheader("DDL - Data Definition Language")
     
-    st.markdown(
+    st.text(
         """
-        ###### Data Definition Language actually consists of the SQL commands that can be used to define the database schema.
-        ###### It simply deals with descriptions of the database schema and is used to create and modify the structure of database objects in the database. 
-        ###### DDL is a set of SQL commands used to create, modify, and delete database structures but not data. 
-        ###### These commands are normally not used by a general user, who should be accessing the database via an application. 
+        Data Definition Language actually consists of the SQL commands that 
+        can be used to define the database schema.
+        It simply deals with descriptions of the database schema and is used 
+        to create and modify the structure of database objects in the database. 
+        DDL is a set of SQL commands used to create, modify, and delete database 
+        structures but not data. 
+        These commands are normally not used by a general user, who should be 
+        accessing the database via an application. 
         """
     )
     if st.toggle("Show DDL Commands"):
@@ -98,7 +102,27 @@ def topics():
     # if st.toggle("Show `st.write` sample output"):
     #     st.write("Did you know I have more then 101 Supreme apps like this?")
     
+    st.subheader("DQL (Data Query Language)")
     
+    st.text(
+        """
+        DQL statements are used for performing queries on the data within schema objects. 
+        The purpose of the DQL Command is to get some schema relation based on the query passed to it. 
+        We can define DQL as follows it is a component of SQL statement that allows getting data from 
+        the database and imposing order upon it. It includes the SELECT statement. 
+        This command allows getting the data out of the database to perform operations with it. 
+        When a SELECT is fired against a table or tables the result is compiled into a 
+        further temporary table, which is displayed or perhaps received by the program i.e. a front-end.
+        """
+    )
+    if st.toggle("Show DQL Commands"):
+        st.code( 
+                """
+                SELECT: It is used to retrieve data from the database.
+                """, language="markdown")
+        
+        
+        
     st.subheader("DML- Data Manipulation Language")
     
     st.markdown(
