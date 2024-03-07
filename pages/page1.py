@@ -27,13 +27,11 @@ from src.Everyday_SQL.components.siderbar import *
 from src.Everyday_SQL.components.metrics import *
 from src.Everyday_SQL.components.charts import *
 from src.Everyday_SQL.components.test import *
-
-
 #######################################################################################################
 #Header of Everyday_SQL by github.com/tushar2704
 #######################################################################################################
 
-main_title()
+# main_title()
 
 #######################################################################################################
 #Page Config of Everyday_SQL by github.com/tushar2704
@@ -45,25 +43,27 @@ custom_style()
 page_header('''
             ''')
 
+#######################################################################################################
+#Pages(1) of Everyday_SQL by github.com/tushar2704
+#######################################################################################################
+
+
+
 
 #Sidebar Pages
 with st.sidebar:
     logo()
-    st.page_link("Home.py", label="Everyday Cheat Sheets", icon="🐍")
+    st.page_link("Home.py", label="Back to Home", icon="🏠")
     
-    st.page_link("pages/page1.py", label="Top SQL Queries", icon="🐍")
-   
     
-
- 
-#######################
-#Body
-
     
 
-#######################################################################################################
-#End of Everyday_SQL by github.com/tushar2704
-#######################################################################################################
+
+def page1():
+    st.header("Top 20 SQL queries that addresses 80% of the programming needs")
+
+
+page1()
 
 
 
@@ -74,7 +74,60 @@ with st.sidebar:
 
 
 
-footer()
-#######################################################################################################
-#End of Everyday_SQL by github.com/tushar2704
-#######################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
