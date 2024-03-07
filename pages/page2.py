@@ -61,6 +61,13 @@ with st.sidebar:
 
 def topics():
     st.header("Structured Query Language")
+    st.text("""
+            Structured Query Language is a domain-specific language used to manage data, 
+            especially in a relational database management system. 
+            It is particularly useful in handling structured data, i.e., 
+            data incorporating relations among entities and variables.
+            """
+            )
     
     
     # col1, col2 = st.columns([0.5, 0.5], gap="small")
@@ -70,15 +77,23 @@ def topics():
     
     st.markdown(
         """
-        ##### Data Definition Language is used to define the structure of a database. 
+        ###### Data Definition Language actually consists of the SQL commands that can be used to define the database schema.
+        ###### It simply deals with descriptions of the database schema and is used to create and modify the structure of database objects in the database. 
+        ###### DDL is a set of SQL commands used to create, modify, and delete database structures but not data. 
+        ###### These commands are normally not used by a general user, who should be accessing the database via an application. 
         """
     )
-    if st.toggle("Show Top DDL Commands"):
+    if st.toggle("Show DDL Commands"):
         st.code( 
                 """
-                CREATE TABLE Tushar
+                CREATE: This command is used to create the database or its objects (like table, index, function, views, store procedure, and triggers).
+                DROP: This command is used to delete objects from the database.
+                ALTER: This is used to alter the structure of the database.
+                TRUNCATE: This is used to remove all records from a table, including all spaces allocated for the records are removed.
+                COMMENT: This is used to add comments to the data dictionary.
+                RENAME: This is used to rename an object existing in the database.
                 
-                """, language="sql")
+                """, language="markdown")
     
     # if st.toggle("Show `st.write` sample output"):
     #     st.write("Did you know I have more then 101 Supreme apps like this?")
