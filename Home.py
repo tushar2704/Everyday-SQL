@@ -46,107 +46,21 @@ page_header('''
             ''')
 
 
-#Sidebar Pages
-with st.sidebar:
-    logo()
-    st.page_link("Home.py", label="Everyday Cheat Sheets", icon="🐍")
+# #Sidebar Pages
+# with st.sidebar:
+#     logo()
+#     st.page_link("Home.py", label="Everyday Cheat Sheets", icon="🐍")
     
-    # st.page_link("pages/page2.py", label="Everyday Cheat Sheets", icon="🐍")
-    # st.page_link("pages/page3.py", label="Data Structures", icon="🐍")
+#     # st.page_link("pages/page2.py", label="Everyday Cheat Sheets", icon="🐍")
+#     # st.page_link("pages/page3.py", label="Data Structures", icon="🐍")
     
-    st.page_link("pages/page5.py", label="Pro Python", icon="🐍")
+#     st.page_link("pages/page5.py", label="Pro Python", icon="🐍")
     
 
  
 #######################
 #Body
-sheet1,sheet2,sheet3,sheet4,sheet5,sheet6,sheet7,sheet8,sheet9,sheet10,sheet11,sheet12,sheet13,sheet14,sheet15,sheet16,sheet17,sheet18, sheet19, sheet20, sheet21=st.tabs(
-    ["Pip","OS","CLI","Files","Http","Lists","Dict",
-     "Math","DB","GraphQL","Re","Str","Scrap","Async","Network","DF","NP","PLT","SKL","PX",
-     "Time"]
-    )
 
-
-
-with sheet1:
-    pip_()
-with sheet2:
-    os_()
-with sheet3:
-    cli()
-
-
-with sheet4:
-    file_handling()
-
-
-with sheet5:
-    http_apis()
-
-
-with sheet6:
-    lists()
-
-
-with sheet7:
-    dict()
-
-
-with sheet8:
-    math()
-
-
-with sheet9:
-    databases()
-
-
-with sheet10:
-    graphql()
-
-
-with sheet11:
-    re_()
-
-
-with sheet12:
-    strings()
-
-
-with sheet13:
-    web_scraping()
-
-with sheet14:
-    async_()
-    
-with sheet15:
-    network()
-    
-with sheet16:
-    df_()
-    
-with sheet17:
-    numpy_()
-
-with sheet18:
-    plots()
-    
-with sheet19:
-    scikit_()
-    
-with sheet20:
-    plotly_()
-    
-with sheet21:
-    time_()
-    
-# with sheet22:
-#     adv_()
-    
-# with sheet23:
-#     oop()
-    
-# with sheet24:
-#     deco_()
     
 
 #######################################################################################################

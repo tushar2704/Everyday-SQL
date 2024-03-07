@@ -58,7 +58,7 @@ def logo():
 
       # Example usage in the Streamlit sidebar
     st.sidebar.markdown(custom_css, unsafe_allow_html=True)
-    st.sidebar.markdown(f'''[<img class="img1" src='data:image/png;base64,{img_to_bytes("src/Everyday_SQL/Everyday_SQL.png")}'>](https://Tushar-Aggarwal.com/)''', unsafe_allow_html=True)
+    st.sidebar.markdown(f'''[<img class="img1" src='data:image/png;base64,{img_to_bytes("src/Everyday_SQL/everyday_sql.png")}'>](https://Tushar-Aggarwal.com/)''', unsafe_allow_html=True)
     
     # st.sidebar.markdown(f"##### <span style='margin-left: 45px;'>[Tushar-Aggarwal.com](https://tushar-aggarwal.com/)</span>", unsafe_allow_html=True)
 
