@@ -27,7 +27,7 @@ from src.Everyday_SQL.components.siderbar import *
 from src.Everyday_SQL.components.metrics import *
 from src.Everyday_SQL.components.charts import *
 from src.Everyday_SQL.components.test import *
-
+from src.Everyday_SQL.components.elements import *
 #######################################################################################################
 #Body of Everyday_SQL by github.com/tushar2704
 #######################################################################################################
@@ -39,14 +39,9 @@ def sql():
     st.image(path)
 
 def topics():
-    st.header("Structured Query Language")
-    st.text("""
-            Structured Query Language is a domain-specific language used to manage data, 
-            especially in a relational database management system. 
-            It is particularly useful in handling structured data, i.e., 
-            data incorporating relations among entities and variables.
-            """
-            )
+    
+    
+    terms()
     
     
     col1, col2 = st.columns([0.5, 0.5], gap="small")
@@ -332,7 +327,7 @@ def topics():
     #Aggregation Functions
     #########
     st.divider() 
-    
+     
     st.subheader("Aggregation Functions")
     
     st.divider()
