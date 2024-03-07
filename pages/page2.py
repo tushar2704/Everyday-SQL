@@ -207,7 +207,7 @@ def topics():
         
         
         
-        st.subheader("Using With Blocks for Multiple Files")
+        st.subheader("GROUP BY")
         
         st.markdown(
             """
@@ -225,7 +225,7 @@ def topics():
         )
         
         
-        st.subheader("Deleting a File")
+        st.subheader("HAVING")
         
         st.markdown(
             """
@@ -245,7 +245,7 @@ def topics():
         
         
         
-        st.subheader("Reading and Writing Binary Files")
+        st.subheader("ORDER BY")
         
         st.markdown(
             """
@@ -262,6 +262,26 @@ def topics():
                 file.write(content)
             """
         )
+        
+        
+        
+        
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        st.subheader("ORDER BY")
+        
 
 
 
