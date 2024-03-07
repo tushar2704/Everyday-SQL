@@ -66,9 +66,8 @@ with st.sidebar:
 #End of Everyday_SQL by github.com/tushar2704
 #######################################################################################################
 
-with st.sidebar:
-    st.divider()
-    terms()
+
+    
 
 
 
