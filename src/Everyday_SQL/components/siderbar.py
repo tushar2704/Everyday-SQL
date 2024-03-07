@@ -1,5 +1,5 @@
 ###© 2024 Tushar Aggarwal. All rights reserved.(https://tushar-aggarwal.com)
-##Everyday_Python
+##Everyday_SQL
 #######################################################################################################
 #Importing dependecies
 #######################################################################################################
@@ -20,16 +20,16 @@ import os
 #######################################################################################################
 #Importing from SRC
 #######################################################################################################
-from src.Everyday_Python.components.header import *
-from src.Everyday_Python.components.body import *
-from src.Everyday_Python.components.navigation import *
-from src.Everyday_Python.components.siderbar import *
-from src.Everyday_Python.components.metrics import *
-from src.Everyday_Python.components.charts import *
-from src.Everyday_Python.components.test import *
+from src.Everyday_SQL.components.header import *
+from src.Everyday_SQL.components.body import *
+from src.Everyday_SQL.components.navigation import *
+from src.Everyday_SQL.components.siderbar import *
+from src.Everyday_SQL.components.metrics import *
+from src.Everyday_SQL.components.charts import *
+from src.Everyday_SQL.components.test import *
 
 #######################################################################################################
-# Sidebar of Everyday_Python by github.com/tushar2704
+# Sidebar of Everyday_SQL by github.com/tushar2704
 #######################################################################################################
 
 def img_to_bytes(img_path):
@@ -58,7 +58,7 @@ def logo():
 
       # Example usage in the Streamlit sidebar
     st.sidebar.markdown(custom_css, unsafe_allow_html=True)
-    st.sidebar.markdown(f'''[<img class="img1" src='data:image/png;base64,{img_to_bytes("src/Everyday_Python/everyday_python.png")}'>](https://Tushar-Aggarwal.com/)''', unsafe_allow_html=True)
+    st.sidebar.markdown(f'''[<img class="img1" src='data:image/png;base64,{img_to_bytes("src/Everyday_SQL/Everyday_SQL.png")}'>](https://Tushar-Aggarwal.com/)''', unsafe_allow_html=True)
     
     # st.sidebar.markdown(f"##### <span style='margin-left: 45px;'>[Tushar-Aggarwal.com](https://tushar-aggarwal.com/)</span>", unsafe_allow_html=True)
 
@@ -94,7 +94,7 @@ def sidebar():
     with st.sidebar:
         st.page_link("Home.py", label="Home", icon="🏠")
         st.page_link("pages/page1.py", label="Python", icon="🐍")
-        # st.page_link("src/Everyday_Python/pages/page2.py", label="Page 2", icon="🐍", disabled=True)
+        # st.page_link("src/Everyday_SQL/pages/page2.py", label="Page 2", icon="🐍", disabled=True)
         st.page_link("http://www.tushar-aggarwal.com", label="Portfolio", icon="🌎")
     
     
