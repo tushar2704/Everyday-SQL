@@ -31,7 +31,7 @@ from src.Everyday_SQL.components.test import *
 #Header of Everyday_SQL by github.com/tushar2704
 #######################################################################################################
 
-# main_title()
+main_title()
 
 #######################################################################################################
 #Page Config of Everyday_SQL by github.com/tushar2704
@@ -54,16 +54,7 @@ page_header('''
 with st.sidebar:
     logo()
     st.page_link("Home.py", label="Back to Home", icon="🏠")
-    
-    
-    
 
-
-def page1():
-    st.header("SQL Concepts")
-
-
-page1()
 
 
 
@@ -71,23 +62,23 @@ page1()
 def topics():
     st.header("Structured Query Language")
     
-    # Create a two-column layout
-    col1, col2 = st.columns([0.5, 0.5], gap="small")
+    
+    # col1, col2 = st.columns([0.5, 0.5], gap="small")
     
     
     st.subheader("DDL - Data Definition Language")
     
     st.markdown(
         """
-        ##### 
+        ##### Data Definition Language is used to define the structure of a database. 
         """
     )
-    st.code(
-        """
-        
-        
-        """
-    )
+    if st.toggle("Show Top DDL Commands"):
+        st.code( 
+                """
+                CREATE TABLE Tushar
+                
+                """, language="sql")
     
     # if st.toggle("Show `st.write` sample output"):
     #     st.write("Did you know I have more then 101 Supreme apps like this?")
@@ -143,7 +134,7 @@ def topics():
     )
     
     
-    
+    st.subheader("SQL - Beginner SQL Syntax")
     st.subheader("SELECT")
     
     st.markdown(
@@ -367,3 +358,8 @@ def topics():
 
 
 
+
+topics()
+#######################################################################################################
+#Pages(2) of Everyday_SQL by github.com/tushar2704
+#######################################################################################################
