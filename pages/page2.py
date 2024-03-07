@@ -123,6 +123,11 @@ def topics():
             
             
             
+        
+    
+    
+    
+    with col2:
         st.subheader("DML- Data Manipulation Language")
         
         st.text(
@@ -143,42 +148,61 @@ def topics():
                     CALL: Call a PL/SQL or JAVA subprogram.
                     EXPLAIN PLAN: It describes the access path to data.
                     """, language="markdown")
-    
-    
-    
-    with col2:
+            
+            
+            
         st.subheader("DCL - Data Control Language")
         
-        st.markdown(
+        st.text(
             """
-            ##### To add text to the end of an existing file:
-            """
-        )
-        st.code(
-            """
-            with open('Tushar.txt', 'a') as file:
-                content = file.write("\n https://www.linkedin.com/in/tusharaggarwalinseec/")
-                print(content)
-            
+            DCL includes commands such as GRANT and REVOKE which mainly deal with the rights, 
+            permissions, and other controls of the database system. 
             """
         )
+        if st.toggle("Show DCL Commands"):
+            st.code( 
+                    """
+                    GRANT: This command gives users access privileges to the database.
+                    # Syntax:
+                    GRANT SELECT, UPDATE ON MY_TABLE TO SOME_USER, ANOTHER_USER;
+                    
+                    REVOKE: This command withdraws the user’s access privileges given 
+                    by using the GRANT command.
+                    # Syntax:
+                    REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2;  
+                    
+                    """, language="markdown")
         
         
         st.subheader("TCL - Transaction Control Language")
         
-        st.markdown(
+        
+        
+        st.text(
             """
-            ##### To read a file line by line into a list:
-            """
-        )
-        st.code(
-            """
-            with open('Tushar.txt', 'r') as file:
-                content = file.readlines()
-                print(content)
-            
+            Transactions group a set of tasks into a single execution unit. 
+            Each transaction begins with a specific task and ends when all the 
+            tasks in the group are successfully completed. If any of the tasks fail, 
+            the transaction fails. 
+            Therefore, a transaction has only two results: success or failure. 
             """
         )
+        if st.toggle("Show TCL Commands"):
+            st.code( 
+                    """
+                    BEGIN: Opens a Transaction.
+                    # Syntax:
+                    COMMIT;  
+                    
+                    ROLLBACK: Rollbacks a transaction in case of any error occurs.
+                    # Syntax:
+                    ROLLBACK;   
+                    
+                    SAVEPOINT: Sets a save point within a transaction.
+                    # Syntax:
+                    SAVEPOINT SAVEPOINT_NAME;  
+                    
+                    """, language="markdown")
     
     
     
@@ -203,7 +227,7 @@ def topics():
     
     
     
-    
+    st.divider()
     
     ###########################################################################################
     # Basics to Advanced Commands
@@ -304,47 +328,47 @@ def topics():
         
         
         
-    st.subheader("Aggregation Functions")
-    st.subheader("SUM(column_name)")
-    st.subheader("COUNT()")
-    st.subheader("COUNT(DISTINCT column_name)")
-    st.subheader("MIN(column_name)")
-    st.subheader("MAX(column_name)")
-    st.subheader("Intermediate SQL Concepts")
-    st.subheader("LIKE")
-    st.subheader("AND")
-    st.subheader("OR")
-    st.subheader("CASE WHEN")
-    st.subheader("IN")
-    st.subheader("UNION ALL")
-    st.subheader("BETWEEN")
-    st.subheader("ORDER BY")
-    st.subheader("CAST")
-    st.subheader("COALESCE")
-    st.subheader("Advanced SQL Concepts")
-    st.subheader("CTEs (Common Table Expressions)")
-    st.subheader("SUBQUERIES")
-    st.subheader("WINDOW FUNCTIONS")
-    st.subheader("Joins")
-    st.subheader("INNER JOIN")
-    st.subheader("LEFT JOIN (or LEFT OUTER JOIN)")
-    st.subheader("FULL JOIN (or FULL OUTER JOIN)")
-    st.subheader("Rank Functions")
-    st.subheader("ROW_NUMBER:")
-    st.subheader("RANK")
-    st.subheader("DENSE_RANK:")
-    st.subheader("Example SQL Patterns")
-    st.subheader("Select Columns Filtered on Criteria")
-    st.subheader("Explore Column Values")
-    st.subheader("Common Aggregations")
-    st.subheader("Research Duplicates with a Subquery")
-    st.subheader("If/Then Logic")
-    st.subheader("Joins")
-    st.subheader("Unions")
-    st.subheader("Change Data Type of Column")
-    st.subheader("Handle Nulls with Coalesce")
-    st.subheader("CTEs")
-    st.subheader("Window Functions")
+    # st.subheader("Aggregation Functions")
+    # st.subheader("SUM(column_name)")
+    # st.subheader("COUNT()")
+    # st.subheader("COUNT(DISTINCT column_name)")
+    # st.subheader("MIN(column_name)")
+    # st.subheader("MAX(column_name)")
+    # st.subheader("Intermediate SQL Concepts")
+    # st.subheader("LIKE")
+    # st.subheader("AND")
+    # st.subheader("OR")
+    # st.subheader("CASE WHEN")
+    # st.subheader("IN")
+    # st.subheader("UNION ALL")
+    # st.subheader("BETWEEN")
+    # st.subheader("ORDER BY")
+    # st.subheader("CAST")
+    # st.subheader("COALESCE")
+    # st.subheader("Advanced SQL Concepts")
+    # st.subheader("CTEs (Common Table Expressions)")
+    # st.subheader("SUBQUERIES")
+    # st.subheader("WINDOW FUNCTIONS")
+    # st.subheader("Joins")
+    # st.subheader("INNER JOIN")
+    # st.subheader("LEFT JOIN (or LEFT OUTER JOIN)")
+    # st.subheader("FULL JOIN (or FULL OUTER JOIN)")
+    # st.subheader("Rank Functions")
+    # st.subheader("ROW_NUMBER:")
+    # st.subheader("RANK")
+    # st.subheader("DENSE_RANK:")
+    # st.subheader("Example SQL Patterns")
+    # st.subheader("Select Columns Filtered on Criteria")
+    # st.subheader("Explore Column Values")
+    # st.subheader("Common Aggregations")
+    # st.subheader("Research Duplicates with a Subquery")
+    # st.subheader("If/Then Logic")
+    # st.subheader("Joins")
+    # st.subheader("Unions")
+    # st.subheader("Change Data Type of Column")
+    # st.subheader("Handle Nulls with Coalesce")
+    # st.subheader("CTEs")
+    # st.subheader("Window Functions")
         
         
         
