@@ -367,73 +367,59 @@ def topics():
         
         
         
-        st.subheader("WHERE")
+        st.subheader("COUNT(DISTINCT column_name)")
         
-        st.text("""Use the WHERE clause to filter the data based on specific conditions. 
-                It helps in narrowing down the data to only those rows that meet the criteria.""")
+        st.text("""This variant of the COUNT function counts the number of distinct (unique) values in a column. """)
         
         st.code(
             """
             /*Example usage:*/
-            SELECT column_name
-            FROM table_name
-            WHERE date >= ‘2023-01-01’
+            SELECT COUNT(DISTINCT column_name)
+            FROM table_name;
             """, language="sql"
         )
         
     
     
     with col6:
-        st.subheader("GROUP BY")
+        st.subheader("AVG(column_name)")
         
-        st.text("""The GROUP BY statement groups rows that have the same values in specified columns. 
-                It's often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) 
-                to group the resultset by one or more columns""")
+        st.text("""The AVG function returns the average value of a numeric column.  
+                It calculates the sum of the values and divides it by the number of values.""")
         
         st.code(
             """
             /*Example usage:*/
-            SELECT 
-                column_name, 
-                COUNT(*) 
-            FROM table_name 
-            GROUP BY column_name;
+            SELECT AVG(column_name) 
+            FROM table_name;
             """, language="sql"
         )
         
         
-        st.subheader("HAVING")
+        st.subheader("MIN(column_name)")
         
-        st.text("""The HAVING clause is used to filter groups created by the GROUP BY clause. 
-                It's like a WHERE clause, but for groups.""")
+        st.text("""The MIN function returns the smallest value of the selected column. 
+                It's useful for finding the lowest number, earliest date, etc.""")
         
         st.code(
             """
             /*Example usage:*/
-            SELECT 
-                column_name, 
-                COUNT(*)
-            FROM table_name
-            GROUP BY column_name
-            HAVING COUNT(*) > 1;
+            SELECT MIN(column_name) 
+            FROM table_name;
             """, language="sql"
         )
         
         
-        st.subheader("ORDER BY")
+        st.subheader("MAX(column_name)")
         
-        st.text("""Use ORDER BY to sort the result set in either ascending or descending order.
-                It specifies the order in which the rows appear in the resultset.""")
+        st.text("""The MAX function returns the largest value of the selected column,
+                which is helpful for identifying the highest number, latest date, and so on.""")
         
         st.code(
             """
             /*Example usage:*/
-            SELECT 
-                column_name1,
-                column_name2,
-                column_name3,
-            FROM table_name
-            ORDER BY column_name3 DESC;
+            SELECT MAX(column_name)
+            FROM table_name;
             """, language="sql"
         )
     
