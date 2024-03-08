@@ -337,38 +337,30 @@ def topics():
     col5, col6 = st.columns([0.5, 0.5], gap="small")
     
     with col5:
-        st.subheader("SELECT")
-        st.text("""The SELECT statement is used to select columns in a database. 
-                It defines the data you want to retrieve from one or more tables""")
+        st.subheader("SUM(column_name)")
+        st.text("""The SUM function calculates the total sum of a numeric column. 
+                It adds up all the values in the specified column.""")
         
         st.code(
             """
             /*Example usage:*/
-            SELECT 
-                column_name1,
-                column_name2,
-                column_name3
-            FROM
-                table_name;
+            SELECT SUM(column_name)
+            FROM table_name;
             """, language="sql"
         )
                 
             
         
-        st.subheader("FROM")
+        st.subheader("COUNT()")
         
-        st.text("""The FROM clause specifies the table from which to pull the data.  
-                It's used in conjunction with SELECT to define the source of the data.""")
+        st.text("""The COUNT function returns the number of rows that matches a specified criterion.   
+                   COUNT() counts all rows in a table.""")
         
         st.code(
             """
             /*Example usage:*/
-            SELECT 
-                column_name1,
-                column_name2,
-                column_name3
-            FROM 
-                table_name;
+            SELECT COUNT(*)
+            FROM table_name;
             """, language="sql"
         )
         
