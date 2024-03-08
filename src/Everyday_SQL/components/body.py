@@ -452,16 +452,18 @@ def topics():
                 
             
         
-        st.subheader("COUNT()")
+        st.subheader("AND")
         
-        st.text("""The COUNT function returns the number of rows that matches a specified criterion.   
-                   COUNT() counts all rows in a table.""")
+        st.text("""The AND operator combines two or more conditions in a WHERE clause. 
+                It returns rows where all the conditions are true.""")
         
         st.code(
             """
             /*Example usage:*/
-            SELECT COUNT(*)
-            FROM table_name;
+            SELECT  
+            FROM table_name 
+            WHERE condition1 
+                AND condition2;
             """, language="sql"
         )
         
@@ -483,35 +485,39 @@ def topics():
     
     
     with col8:
-        st.subheader("AVG(column_name)")
+        st.subheader("OR")
         
-        st.text("""The AVG function returns the average value of a numeric column.  
-                It calculates the sum of the values and divides it by the number of values.""")
+        st.text("""The OR operator is used in a WHERE clause to combine conditions.   
+                It returns rows where any of the conditions are true.""")
         
         st.code(
             """
             /*Example usage:*/
-            SELECT AVG(column_name) 
+            SELECT  
+            FROM table_name 
+            WHERE condition1 
+                OR condition2;
+            """, language="sql"
+        )
+        
+        
+        st.subheader("CASE WHEN")
+        
+        st.text("""The CASE WHEN statement provides if then else logic within SQL. 
+                It's used for conditional expressions.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                CASE WHEN condition THEN result
+                    ELSE alternative END 
             FROM table_name;
             """, language="sql"
         )
         
         
-        st.subheader("MIN(column_name)")
-        
-        st.text("""The MIN function returns the smallest value of the selected column. 
-                It's useful for finding the lowest number, earliest date, etc.""")
-        
-        st.code(
-            """
-            /*Example usage:*/
-            SELECT MIN(column_name) 
-            FROM table_name;
-            """, language="sql"
-        )
-        
-        
-        st.subheader("MAX(column_name)")
+        st.subheader("IN")
         
         st.text("""The MAX function returns the largest value of the selected column,
                 which is helpful for identifying the highest number, latest date, and so on.""")
