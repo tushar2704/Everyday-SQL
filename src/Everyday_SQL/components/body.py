@@ -497,6 +497,20 @@ def topics():
             """, language="sql"
         )
         
+        st.subheader("COALESCE")
+        
+        st.text("""The COALESCE function returns the first nonnull value in a list of arguments.  
+                It's useful for handling NULL values.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                COALESCE(column1, column2, ...) 
+            FROM table_name;
+            """, language="sql"
+        )
+        
     
     
     with col8:
@@ -582,11 +596,174 @@ def topics():
     
     
     
+    
     ##########
-    #Aggregation Functions
+    #Intermediate SQL Concepts
     #########
     st.divider() 
+     
+    st.subheader("Advanced SQL Concepts")
     
+    st.divider()
+    
+    
+    
+    col7, col8 = st.columns([0.5, 0.5], gap="small")
+    
+    with col7:
+        st.subheader("LIKE")
+        st.text("""The LIKE operator is used to search for a specified pattern in a column. 
+                It's often used in a WHERE clause.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT *
+            FROM table_name
+            WHERE column_name LIKE ‘%thequery%’;
+            """, language="sql"
+        )
+                
+            
+        
+        st.subheader("AND")
+        
+        st.text("""The AND operator combines two or more conditions in a WHERE clause. 
+                It returns rows where all the conditions are true.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT  
+            FROM table_name 
+            WHERE condition1 
+                AND condition2;
+            """, language="sql"
+        )
+        
+        
+        
+        
+        st.subheader("COUNT(DISTINCT column_name)")
+        
+        st.text("""This variant of the COUNT function counts the number of distinct (unique) values in a column. """)
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT COUNT(DISTINCT column_name)
+            FROM table_name;
+            """, language="sql"
+        )
+        
+        st.subheader("BETWEEN")
+        
+        st.text("""The BETWEEN operator selects values within a given range.  
+                It's used in a WHERE clause for filtering.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT  
+            FROM table_name 
+            WHERE column_name 
+            BETWEEN value1 AND value2;
+            """, language="sql"
+        )
+        
+        st.subheader("COALESCE")
+        
+        st.text("""The COALESCE function returns the first nonnull value in a list of arguments.  
+                It's useful for handling NULL values.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                COALESCE(column1, column2, ...) 
+            FROM table_name;
+            """, language="sql"
+        )
+        
+    
+    
+    with col8:
+        st.subheader("OR")
+        
+        st.text("""The OR operator is used in a WHERE clause to combine conditions.   
+                It returns rows where any of the conditions are true.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT  
+            FROM table_name 
+            WHERE condition1 
+                OR condition2;
+            """, language="sql"
+        )
+        
+        
+        st.subheader("CASE WHEN")
+        
+        st.text("""The CASE WHEN statement provides if then else logic within SQL. 
+                It's used for conditional expressions.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                CASE WHEN condition THEN result
+                    ELSE alternative END 
+            FROM table_name;
+            """, language="sql"
+        )
+        
+        
+        st.subheader("IN")
+        
+        st.text("""The IN operator allows you to specify multiple values in a WHERE clause. 
+                It's useful for filtering by a list of items.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT  
+            FROM table_name 
+            WHERE column_name IN (value1, value2, ...);
+            """, language="sql"
+        )
+        
+        st.subheader("UNION ALL")
+        
+        st.text("""The UNION ALL operator is used to combine the resultset of two or more SELECT statements.  
+                It includes all duplicates.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT column_name 
+            FROM table1 
+            UNION ALL 
+            SELECT column_name 
+            FROM table2;
+            """, language="sql"
+        )
+
+        
+        st.subheader("CAST")
+        
+        st.text("""The CAST function converts one data type into another.  
+                It's used for type conversion in queries.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                CAST(column_name AS data_type) 
+            FROM table_name;
+            """, language="sql"
+        )
     
     
     
