@@ -422,6 +422,107 @@ def topics():
             FROM table_name;
             """, language="sql"
         )
+        
+    ##########
+    #Intermediate SQL Concepts
+    #########
+    st.divider() 
+     
+    st.subheader("Intermediate SQL Concepts")
+    
+    st.divider()
+    
+    
+    
+    col7, col8 = st.columns([0.5, 0.5], gap="small")
+    
+    with col7:
+        st.subheader("LIKE")
+        st.text("""The LIKE operator is used to search for a specified pattern in a column. 
+                It's often used in a WHERE clause.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT *
+            FROM table_name
+            WHERE column_name LIKE ‘%thequery%’;
+            """, language="sql"
+        )
+                
+            
+        
+        st.subheader("COUNT()")
+        
+        st.text("""The COUNT function returns the number of rows that matches a specified criterion.   
+                   COUNT() counts all rows in a table.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT COUNT(*)
+            FROM table_name;
+            """, language="sql"
+        )
+        
+        
+        
+        
+        st.subheader("COUNT(DISTINCT column_name)")
+        
+        st.text("""This variant of the COUNT function counts the number of distinct (unique) values in a column. """)
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT COUNT(DISTINCT column_name)
+            FROM table_name;
+            """, language="sql"
+        )
+        
+    
+    
+    with col8:
+        st.subheader("AVG(column_name)")
+        
+        st.text("""The AVG function returns the average value of a numeric column.  
+                It calculates the sum of the values and divides it by the number of values.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT AVG(column_name) 
+            FROM table_name;
+            """, language="sql"
+        )
+        
+        
+        st.subheader("MIN(column_name)")
+        
+        st.text("""The MIN function returns the smallest value of the selected column. 
+                It's useful for finding the lowest number, earliest date, etc.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT MIN(column_name) 
+            FROM table_name;
+            """, language="sql"
+        )
+        
+        
+        st.subheader("MAX(column_name)")
+        
+        st.text("""The MAX function returns the largest value of the selected column,
+                which is helpful for identifying the highest number, latest date, and so on.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT MAX(column_name)
+            FROM table_name;
+            """, language="sql"
+        )
     
     
     
