@@ -482,6 +482,21 @@ def topics():
             """, language="sql"
         )
         
+        st.subheader("BETWEEN")
+        
+        st.text("""The BETWEEN operator selects values within a given range.  
+                It's used in a WHERE clause for filtering.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT  
+            FROM table_name 
+            WHERE column_name 
+            BETWEEN value1 AND value2;
+            """, language="sql"
+        )
+        
     
     
     with col8:
@@ -519,17 +534,48 @@ def topics():
         
         st.subheader("IN")
         
-        st.text("""The MAX function returns the largest value of the selected column,
-                which is helpful for identifying the highest number, latest date, and so on.""")
+        st.text("""The IN operator allows you to specify multiple values in a WHERE clause. 
+                It's useful for filtering by a list of items.""")
         
         st.code(
             """
             /*Example usage:*/
-            SELECT MAX(column_name)
+            SELECT  
+            FROM table_name 
+            WHERE column_name IN (value1, value2, ...);
+            """, language="sql"
+        )
+        
+        st.subheader("UNION ALL")
+        
+        st.text("""The UNION ALL operator is used to combine the resultset of two or more SELECT statements.  
+                It includes all duplicates.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT column_name 
+            FROM table1 
+            UNION ALL 
+            SELECT column_name 
+            FROM table2;
+            """, language="sql"
+        )
+
+        
+        st.subheader("CAST")
+        
+        st.text("""The CAST function converts one data type into another.  
+                It's used for type conversion in queries.""")
+        
+        st.code(
+            """
+            /*Example usage:*/
+            SELECT 
+                CAST(column_name AS data_type) 
             FROM table_name;
             """, language="sql"
         )
-    
     
     
     
